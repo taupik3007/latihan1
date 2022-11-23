@@ -2,8 +2,9 @@
 
 include 'coba2.php';
 
+$nama = $_POST['nama'];
 
-$data = mysqli_query($koneksi,"SELECT * FROM `coba`");
+$data = mysqli_query($koneksi,"SELECT * FROM `coba` where  `nama` = '$nama'   ");
 
 // if($data == true){
 //     echo "koneksi berhasil";

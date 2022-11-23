@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="proses.php" method="GET">
+    <form action="coba1.php" method="POST">
 
-        <input type="text" name="nama_depan">
-        <input type="text" name="nama_belakang" >
+        <input type="text" name="nama">
+      
         <input type="submit" value="kirim">
 
 
