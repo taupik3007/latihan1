@@ -1,28 +1,31 @@
-<?php
+<?php 
 
 include 'coba2.php';
+//manpilkan
 
-$nama = $_POST['nama'];
+// $kelas = $_POST['nama_belakang'];
+// $id = $_POST['nama_depan'];
+$data = mysqli_query($koneksi,"SELECT * FROM `coba`  ");
+// OR akan langsung memanggil yang jika salah satu data nya memenuhi
+// AND akan langsung memanggil yang jika semua datanya sudah memenuhi
 
-$data = mysqli_query($koneksi,"SELECT * FROM `coba` where  `nama` = '$nama'   ");
-
-// if($data == true){
-//     echo "koneksi berhasil";
+// if ($data == true) {
+// 	echo "koneksi berhasil";
 // }else{
-//     echo "koneksi gagal";
-// }
+// 	echo "koneksi gagal";
+// } 
 
-foreach($data as $data){
-    echo $data['nama']."&nbsp";
-    echo $data['kelas']."&nbsp";
-    echo $data['nilai']."<br>";
+foreach ($data as $data) {
+	// code...
+	echo $data['nama']."&nbsp";
+	echo $data['kelas']."&nbsp";
+	echo $data['nilai'];
+    $id = $data['id'];
+	?>
+	<a href="proses.php?id=<?php echo  $id; ?>">delete</a><br>
+
+
+	<?php
 }
 
-
-
-
-
-
-
-?>
-
+ ?>

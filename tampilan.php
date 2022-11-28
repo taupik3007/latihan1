@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="coba1.php" method="POST">
+    <form action="coba1.php" method="get">
 
         <input type="text" name="nama">
       
