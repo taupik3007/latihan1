@@ -22,7 +22,8 @@ foreach ($data as $data) {
 	echo $data['nilai'];
     $id = $data['id'];
 	?>
-	<a href="proses.php?id=<?php echo  $id; ?>">delete</a><br>
+	<a href="proses.php?id=<?php echo  $id; ?>">delete</a>
+	<a href="tampilan.php?id=<?php echo  $data['id']; ?>">edit</a><br>
 
 
 	<?php

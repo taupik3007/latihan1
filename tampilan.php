@@ -7,9 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="coba1.php" method="get">
 
-        <input type="text" name="nama">
+    <?php
+    $id = $_GET['id'];
+   
+    include 'coba2.php';
+    $data = mysqli_query($koneksi,"SELECT * FROM `coba` WHERE `id` = $id ");
+    $tampil = mysqli_fetch_array($data);
+    
+    
+    
+    ?>
+
+
+
+
+    <form action="update.php" method="post">
+        <input type="text" name="id" hidden=""  value="<?php echo $tampil['id'];?>" >
+        <input type="text" name="nama" value="<?php echo $tampil['nama'];?>">
+        <input type="text" name="kelas" value="<?php echo $tampil['kelas'];?>">
+        <input type="text" name="nilai" value="<?php echo $tampil['nilai'];?>">
       
         <input type="submit" value="kirim">
 
